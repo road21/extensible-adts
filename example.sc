@@ -1,9 +1,5 @@
-# extensible-adts
-
-An example how to generalize kyo's records to support sum types:
-
-```scala
-import adts.ADT.~
+import adts.*
+import ADT.~
 
 type circle = "radius" ~ Double
 type square = "length" ~ Double
@@ -26,4 +22,3 @@ def area(shape: ADT[shape]): Double =
 
 println(area("typ" ~ "circle" & "radius" ~ 1.0))
 // area("radius" ~ 1.0) // is not compiling
-```
